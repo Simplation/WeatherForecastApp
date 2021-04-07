@@ -22,38 +22,39 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = purple200,
-    primaryVariant = purple700,
-    secondary = teal200
+    primary = grayish_blue_900,
+    secondary = grayish_blue_300,
+    background = grayish_blue_900,
+    surface = white_50_65a,
+    onPrimary = white_50,
+    onSecondary = white_50,
+    onBackground = white_50,
+    onSurface = grayish_blue_900
 )
 
 private val LightColorPalette = lightColors(
-    primary = purple500,
-    primaryVariant = purple700,
-    secondary = teal200
-
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = grayish_blue_900,
+    secondary = grayish_blue_300,
+    background = grayish_blue_900,
+    surface = white_50_65a,
+    onPrimary = white_50,
+    onSecondary = white_50,
+    onBackground = white_50,
+    onSurface = grayish_blue_900
 )
 
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
-    val colors = if (darkTheme) {
+fun WeatherForecastTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+    val weatherColors = if (darkTheme) {
         DarkColorPalette
     } else {
         LightColorPalette
     }
 
     MaterialTheme(
-        colors = colors,
-        typography = typography,
-        shapes = shapes,
+        colors = weatherColors,
+        typography = weatherTypography,
+        shapes = weatherShapes,
         content = content
     )
 }
