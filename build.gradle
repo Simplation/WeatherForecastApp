@@ -16,7 +16,7 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.5.10'
+        kotlin_version = '1.4.32'
         compose_version = '1.0.0-beta07'
         coroutines_version = '1.4.2'
         dagger_hilt_version = '2.33-beta'
